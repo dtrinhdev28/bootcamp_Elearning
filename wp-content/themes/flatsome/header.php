@@ -42,63 +42,67 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap-grid.min.css"
 			integrity="sha512-zDDxSlYrbKTTfup/YyljmstpX+1jwjeg15AKS/fl26gRxfpD+HMr6dfuJQzCcFtoIEjf93SuCffose5gDQOZtg=="
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-		<!-- bootstrap & swiper -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- swiper -->
+		<link rel="stylesheet" href="/wp-content/themes/flatsome-child/assets/css/swiper-bundle.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
 			integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
 			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="/wp-content/themes/flatsome-child/assets/js/swiper-bundle.min.js"></script>
+
 
 		<!-- slide start  -->
 		<div class="container">
-			<div class="row __banner_wrap">
-				<div class="col-xxl-6 col-lg-6 col-xl-6 col-sm-12 col-md-12">
-					<!-- <div class="__text_content_wrap d-flex justify-content-center h-100 flex-column ">
-										<?php if (get_sub_field('slide_sub_title')): ?>
-											<p class="__text_sub_content"><?php echo get_sub_field('slide_sub_title') ?>
-											</p>
-										<?php endif; ?>
-
-										<?php if (get_sub_field('slide_title')): ?>
-											<h2 class="ls-2 __text_title_content">
-												<?php echo get_sub_field('slide_title') ?>
-											</h2>
-										<?php endif; ?>
-
-										<?php if (get_sub_field('slide_description')): ?>
-											<p class="__text_description_content">
-												<?php echo get_sub_field('slide_description') ?>
-											</p>
-										<?php endif; ?>
-
-										<?php if (get_sub_field('slide_button_title')): ?>
-											<div class="__text_button_content wp-block-button hover-white">
-												<a style="border-radius: 5px; color: #353758;"
-													class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-													href="<?php echo (get_sub_field('slide_button_link')) ? get_sub_field('slide_button_link') : '' ?>"><?php echo (get_sub_field('slide_button_title')) ? get_sub_field('slide_button_title') : '' ?>
-													&#8594; </a>
-											</div>
-										<?php endif; ?>
-									</div> -->
-				</div>
-
-				<div class="col-xxl-6 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+			<div class="d-flex px-5 __banner_wrap">
+				<div class="col-6 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+					<!-- <div class="__text_content_wrap d-flex justify-content-center h-100 flex-column "> -->
 					<?php if (have_rows('content_slide_images')):
 						?>
-						<div class="swiper mySwiper">
-							<div class="swiper-wrapper">
-								<?php while (have_rows('content_slide_images')):
-									the_row() ?>
-									<!-- Slides -->
-									<div class="swiper-slide">
-										<img class="w-100 __custom_image"
-											src="<?php echo get_sub_field('image_slide_custom') ?>"
-											alt="<?php echo get_sub_field('image_slide_custom') ?>" />
-									</div>
-								<?php endwhile; ?>
-							</div>
-							<div class="swiper-pagination"></div>
+						<?php if (get_field('subtitle')): ?>
+							<p class="__text_sub_content"><?php echo get_field('subtitle') ?>
+							</p>
+						<?php endif; ?>
+
+						<?php if (get_field('title')): ?>
+							<h2 class="ls-2 __text_title_content">
+								<?php echo get_field('title') ?>
+							</h2>
+						<?php endif; ?>
+
+						<?php if (get_field('descripption')): ?>
+							<p class="__text_description_content">
+								<?php echo get_field('descripption') ?>
+							</p>
+						<?php endif; ?>
+
+						<div class="__text_button_content wp-block-button hover-white">
+							<a style="border-radius: 5px; color: #353758;"
+								class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
+								href="<?php echo (get_field('button_link')) ? get_field('button_link') : '' ?>"><?php echo (get_field('button_content')) ? get_field('button_content') : '' ?>
+								&#8594; </a>
 						</div>
+
+					<?php endif; ?>
+
+					<!-- </div> -->
+				</div>
+
+				<div class="swiper mySwiper col-6 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+					<?php if (have_rows('content_slide_images')):
+						?>
+						<!-- <div class=""> -->
+						<div class="swiper-wrapper">
+							<?php while (have_rows('content_slide_images')):
+								the_row() ?>
+								<!-- Slides -->
+								<div class="swiper-slide" style="width: 585px;">
+									<img class="__custom_image" src="<?php echo get_sub_field('image_slide_custom') ?>"
+										alt="<?php echo get_sub_field('image_slide_custom') ?>" />
+								</div>
+							<?php endwhile; ?>
+						</div>
+						<div class="swiper-pagination"></div>
+						<!-- </div> -->
 					<?php endif; ?>
 
 				</div>

@@ -14,3 +14,17 @@ Version: 3.0
 
 
 }
+
+/* custom css */
+.__banner_wrap {
+    height: 350px;
+    align-items: center;
+}
+
+.mySwiper {
+    border-radius: 20px;
+}
+
+.swiper {
+    background-color: #ef9b11aa;
+  }
