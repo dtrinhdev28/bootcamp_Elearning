@@ -1,0 +1,10 @@
+# Configuration
+# wp-config.php
+
+# Example themes
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+*.log

@@ -20,12 +20,15 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+// define( 'DB_NAME', 'cms_bootcamplearning' );
 define( 'DB_NAME', 'cms_elearning' );
 
 /** Database username */
+// define( 'DB_USER', 'webmaster' );
 define( 'DB_USER', 'root' );
 
 /** Database password */
+// define( 'DB_PASSWORD', 'WcCp}H;_dr1o' );
 define( 'DB_PASSWORD', '' );
 
 /** Database hostname */
