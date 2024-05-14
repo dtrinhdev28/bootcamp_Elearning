@@ -31,14 +31,13 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 	return;
 }
 ?>
-
+<!-- course -->
 <?php do_action( 'tutor_course/single/before/wrap' ); ?>
 <div <?php tutor_post_class( 'tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent' ); ?>>
 	<div class="tutor-course-details-page tutor-container">
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<div class="tutor-row tutor-gx-xl-5">
 			<main class="tutor-col-xl-8">
-				<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
 				<?php do_action( 'tutor_course/single/before/inner-wrap' ); ?>
 
 				<?php if ( $is_mobile && 'top' === $enrollment_box_position ) : ?>
@@ -47,13 +46,12 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 					</div>
 				<?php endif; ?>
 
-				<div class="tutor-course-details-tab tutor-mt-32">
-					<?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
+				<div class="tutor-course-details-tab">
+					<!-- <?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
 						<div class="tutor-is-sticky">
-							<?php tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
+							<?php // tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
 						</div>
-					<?php endif; ?>
-					<div class="tutor-tab tutor-pt-24">
+					<?php endif; ?> -->
 						<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
 							<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo 'info' == $key ? ' is-active' : ''; ?>">
 								<?php
@@ -72,12 +70,15 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 								?>
 							</div>
 						<?php endforeach; ?>
-					</div>
 				</div>
 				<?php do_action( 'tutor_course/single/after/inner-wrap' ); ?>
 			</main>
 
 			<aside class="tutor-col-xl-4">
+
+			<!-- course -->
+			<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
+
 				<?php $sidebar_attr = apply_filters( 'tutor_course_details_sidebar_attr', '' ); ?>
 				<div class="tutor-single-course-sidebar tutor-mt-40 tutor-mt-xl-0" <?php echo esc_attr( $sidebar_attr ); ?> >
 					<?php do_action( 'tutor_course/single/before/sidebar' ); ?>
@@ -91,6 +92,18 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 						<?php tutor_course_requirements_html(); ?>
 						<?php tutor_course_tags_html(); ?>
 						<?php tutor_course_target_audience_html(); ?>
+					</div>
+
+					<div class="tutor-course-details-actions tutor-mt-12 tutor-mt-sm-0">
+						<a href="#" class="tutor-btn tutor-btn-ghost tutor-course-wishlist-btn tutor-mr-16" data-course-id="<?php echo get_the_ID(); ?>">
+							<i class="<?php echo $is_wish_listed ? 'tutor-icon-bookmark-bold' : 'tutor-icon-bookmark-line'; ?> tutor-mr-8"></i> <?php esc_html_e( 'Wishlist', 'tutor' ); ?>
+						</a>
+
+						<?php
+						if ( tutor_utils()->get_option( 'enable_course_share', false, true, true ) ) {
+							tutor_load_template_from_custom_path( tutor()->path . '/views/course-share.php', array(), false );
+						}
+						?>
 					</div>
 
 					<?php do_action( 'tutor_course/single/after/sidebar' ); ?>

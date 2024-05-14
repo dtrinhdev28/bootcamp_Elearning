@@ -16,7 +16,7 @@ do_action( 'tutor_course/single/enrolled/before/instructors' );
 $instructors = tutor_utils()->get_instructors_by_course();
 
 if ( $instructors && count( $instructors ) ) : ?>
-<div class="tutor-course-details-instructors">
+<!-- <div class="tutor-course-details-instructors">
 	<h3 class="tutor-fs-6 tutor-fw-medium tutor-color-black tutor-mb-16">
 		<?php esc_html_e( 'A course by', 'tutor' ); ?>
 	</h3>
@@ -45,7 +45,7 @@ if ( $instructors && count( $instructors ) ) : ?>
 			</div>
 		</div>
 	<?php endforeach; ?>
-</div>
+</div> -->
 	<?php
 endif;
 

@@ -10,7 +10,6 @@
  */
 
 use TUTOR\Input;
-
 tutor_utils()->tutor_custom_header();
 
 $get = isset( $_GET['course_filter'] ) ? Input::sanitize_array( $_GET ) : array();//phpcs:ignore

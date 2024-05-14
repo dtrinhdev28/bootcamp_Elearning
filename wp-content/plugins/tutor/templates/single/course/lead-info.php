@@ -36,13 +36,13 @@ if ( is_null( $course_rating ) ) {
 ?>
 
 <header class="tutor-course-details-header tutor-mb-44">
-	<?php if ( ! $disable_reviews ) : ?>
+	<!-- <?php if ( ! $disable_reviews ) : ?>
 		<div class="tutor-course-details-ratings">
 			<?php
 				tutor_utils()->star_rating_generator_v2( $course_rating->rating_avg, $course_rating->rating_count, true );
 			?>
 		</div>
-	<?php endif; ?>
+	<?php endif; ?> -->
 
 	<h1 class="tutor-course-details-title tutor-fs-4 tutor-fw-bold tutor-color-black tutor-mt-12 tutor-mb-0">
 		<?php do_action( 'tutor_course/single/title/before' ); ?>
@@ -51,7 +51,7 @@ if ( is_null( $course_rating ) ) {
 
 	<div class="tutor-course-details-top tutor-mt-16">
 		<div class="tutor-row">
-			<div class="tutor-col">
+			<!-- <div class="tutor-col">
 				<div class="tutor-meta tutor-course-details-info"> 
 					<?php if ( $show_author ) : ?>
 					<div>
@@ -93,9 +93,9 @@ if ( is_null( $course_rating ) ) {
 						<?php endif; ?>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="tutor-col-auto">
+			<!-- <div class="tutor-col-auto">
 				<div class="tutor-course-details-actions tutor-mt-12 tutor-mt-sm-0">
 					<a href="#" class="tutor-btn tutor-btn-ghost tutor-course-wishlist-btn tutor-mr-16" data-course-id="<?php echo get_the_ID(); ?>">
 						<i class="<?php echo $is_wish_listed ? 'tutor-icon-bookmark-bold' : 'tutor-icon-bookmark-line'; ?> tutor-mr-8"></i> <?php esc_html_e( 'Wishlist', 'tutor' ); ?>
@@ -107,7 +107,7 @@ if ( is_null( $course_rating ) ) {
 					}
 					?>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </header>

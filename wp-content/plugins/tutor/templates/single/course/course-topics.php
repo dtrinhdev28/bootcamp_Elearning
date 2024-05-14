@@ -30,7 +30,6 @@ if ( is_null( $is_enrolled ) ) {
 
 do_action( 'tutor_course/single/before/topics' );
 ?>
-<div class="tutor-mt-40">
 	<?php if ( $topics->have_posts() ) : ?>
 
 		<h3 class="tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-24 tutor-course-content-title">
@@ -147,6 +146,5 @@ do_action( 'tutor_course/single/before/topics' );
 			<?php endwhile; ?>
 		</div>
 	<?php endif; ?>
-</div>
 
 <?php do_action( 'tutor_course/single/after/topics', $course_id ); ?>

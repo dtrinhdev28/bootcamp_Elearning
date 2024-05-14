@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/stylesto/public_html/
+    # - /bin/cp -rf images $DEPLOYPATH
+    # - /bin/cp -rf content $DEPLOYPATH

@@ -1,0 +1,63 @@
+/* .ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
+    text-decoration: none !important;
+} */
+
+.tutor-course-card.etlms-course-card-classic.etlms-has-hover-animation {
+    box-shadow: none ;
+}
+
+.tutor-course-name {
+    margin: 0 !important;
+}
+
+.tutor-course-name a {
+    text-decoration: none !important;
+    font-size: 14px !important;
+}
+
+.tutor-course-card .tutor-course-thumbnail {
+    border-radius: 16px !important;
+}
+
+.tutor-card {
+    background-color: transparent;
+}
+.elementor-25681 .elementor-element.elementor-element-cec33b0 .etlms-course-list-main-wrap .tutor-course-list {
+    column-gap: 16px !important;
+}
+
+.etlms-course-list .tutor-courses-wrap {
+    margin: auto !important;
+}
+
+.__enroll-user {
+    margin-left: 4%;
+}
+
+.tutor-card-body {
+    padding: 2px 0 !important;
+}
+
+.tutor-course-card .tutor-course-difficulty-level {
+    background: rgba(0, 0, 0, .3) !important;
+}
+
+.level_course_icon {
+    height: 16px !important;
+}
+
+.tutor-card-md .tutor-card-body {
+    padding: 20px !important;
+}
+
+.tutor-course-thumbnail img {
+    border-radius: 16px;
+}
+
+.tutor-single-course-sidebar .tutor-sidebar-card .tutor-card-body {
+    background-color: transparent !important;
+}
+
+.__custom_box_tutor {
+    border: none !important;
+}

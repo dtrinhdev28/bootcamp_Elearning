@@ -63,7 +63,7 @@ $login_url    = tutor_utils()->get_option( 'enable_tutor_native_login', null, tr
 
 ?>
 
-<div class="tutor-card tutor-card-md tutor-sidebar-card">
+<div class="tutor-card __custom_box_tutor tutor-card-md tutor-sidebar-card">
 	<?php
 	$tutor_load_sidebar_actions = apply_filters( 'tutor_load_single_sidebar_actions', true, get_the_ID() );
 	if ( $tutor_load_sidebar_actions ) :
