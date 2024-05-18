@@ -35,7 +35,6 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>
 <?php astra_body_top(); ?>
 <?php wp_body_open(); ?>
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/> -->
 <a
 	class="skip-link screen-reader-text"
 	href="#content"

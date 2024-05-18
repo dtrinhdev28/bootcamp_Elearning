@@ -3,7 +3,7 @@
 } */
 
 .tutor-course-card.etlms-course-card-classic.etlms-has-hover-animation {
-    box-shadow: none ;
+    box-shadow: none;
 }
 
 .tutor-course-name {
@@ -22,6 +22,7 @@
 .tutor-card {
     background-color: transparent;
 }
+
 .elementor-25681 .elementor-element.elementor-element-cec33b0 .etlms-course-list-main-wrap .tutor-course-list {
     column-gap: 16px !important;
 }
@@ -60,4 +61,45 @@
 
 .__custom_box_tutor {
     border: none !important;
+}
+
+.elementor-post__title a {
+    text-decoration: none !important;
+}
+
+.elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+    margin-top: 10px !important;
+}
+
+.elementor-post__title {
+    height: 26px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.elementor-post__thumbnail img {
+    height: 160px !important;
+}
+
+.elementor-post__meta-data {
+    /* margin-top: -10px; */
+}
+
+.elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+    margin: 0 !important;
+}
+
+.elementor-post__text {
+    padding-top: 20px;
+}
+
+.elementor-post__thumbnail__link:hover {
+    background-color: #000;
+    transform: none;
+    transition: all 0s ease 0s;
+    outline: rgb(255, 0, 0) dashed 0.8px;
+    box-sizing: border-box;
+    border-radius: 16px;
 }

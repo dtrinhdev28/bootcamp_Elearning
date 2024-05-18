@@ -3,8 +3,8 @@
     <a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_title(); ?></a>
 </h3>
 
-<p>
+<span>
 <?php
 echo '<i class="fa fa-users"></i>'. '<span class="__enroll-user">' .tutor_utils()->count_enrolled_users_by_course(). '<span>';
 ?>
-</p>
+</span>
