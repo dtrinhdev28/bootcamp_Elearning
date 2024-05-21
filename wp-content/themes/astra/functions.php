@@ -186,3 +186,22 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
 // css custom 
 wp_enqueue_style( 'custom_css', get_template_directory_uri() . '/assets/css/custom_css_by_trinh.css', array(), '1.1', 'all' );
+
+add_filter('woocommerce_cart_needs_shipping_address', '__return_false');
+add_filter('woocommerce_checkout_fields', 'vutruso_remove_shipping_address');
+
+function vutruso_remove_shipping_address($fields) {
+    unset($fields['shipping']);
+    return $fields;
+}
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+     unset($fields['billing']['billing_postcode']);
+     unset($fields['billing']['billing_state']);
+     unset($fields['billing']['billing_address_2']);
+     unset($fields['billing']['billing_city']);
+     unset($fields['billing']['billing_company']);
+     unset($fields['billing']['billing_country']);
+     return $fields;
+}

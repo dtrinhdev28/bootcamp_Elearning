@@ -20,8 +20,8 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-// define( 'DB_NAME', 'cms_bootcamplearning' );
-define( 'DB_NAME', 'cms_elearning' );
+define( 'DB_NAME', 'cms_bootcamplearning' );
+// define( 'DB_NAME', 'elearn' );
 
 /** Database username */
 // define( 'DB_USER', 'webmaster' );
