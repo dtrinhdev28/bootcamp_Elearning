@@ -10,8 +10,8 @@
  * @since 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
 }
 
 ?><!DOCTYPE html>
@@ -19,17 +19,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 <html <?php language_attributes(); ?>>
 <head>
 <?php astra_head_top(); ?>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php 
-if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
-	?>
-	 <link rel="profile" href="https://gmpg.org/xfn/11"> 
+<?php
+if (apply_filters('astra_header_profile_gmpg_link', true)) {
+    ?>
+	 <link rel="profile" href="https://gmpg.org/xfn/11">
 	 <?php
-} 
+}
 ?>
 <?php wp_head(); ?>
 <?php astra_head_bottom(); ?>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HDFGFF6RFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HDFGFF6RFE');
+</script>
+
 </head>
 
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>
@@ -39,30 +50,30 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 	class="skip-link screen-reader-text"
 	href="#content"
 	role="link"
-	title="<?php echo esc_attr( astra_default_strings( 'string-header-skip-link', false ) ); ?>">
-		<?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?>
+	title="<?php echo esc_attr(astra_default_strings('string-header-skip-link', false)); ?>">
+		<?php echo esc_html(astra_default_strings('string-header-skip-link', false)); ?>
 </a>
 
 <div
 <?php
-	echo astra_attr(
-		'site',
-		array(
-			'id'    => 'page',
-			'class' => 'hfeed site',
-		)
-	);
-	?>
+echo astra_attr(
+    'site',
+    array(
+        'id' => 'page',
+        'class' => 'hfeed site',
+    )
+);
+?>
 >
 	<?php
-	astra_header_before();
+astra_header_before();
 
-	astra_header();
+astra_header();
 
-	astra_header_after();
+astra_header_after();
 
-	astra_content_before();
-	?>
+astra_content_before();
+?>
 	<div id="content" class="site-content">
 		<div class="ast-container">
 		<?php astra_content_top(); ?>
