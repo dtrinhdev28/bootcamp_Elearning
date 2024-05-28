@@ -1,0 +1,4 @@
+2024-05-11T10:26:20+00:00 DEBUG Automattic\WooCommerce\Internal\DataStores\Orders\DataSynchronizer::get_current_orders_pending_sync_count was called but no order types were registered: it may have been called too early.
+2024-05-11T10:31:13+00:00 DEBUG Automattic\WooCommerce\Internal\DataStores\Orders\DataSynchronizer::get_current_orders_pending_sync_count was called but no order types were registered: it may have been called too early.
+2024-05-11T10:58:26+00:00 INFO Payment gateway enabled: "Cash on delivery"
+2024-05-11T11:32:33+00:00 INFO Payment gateway enabled: "Scan code Momo"

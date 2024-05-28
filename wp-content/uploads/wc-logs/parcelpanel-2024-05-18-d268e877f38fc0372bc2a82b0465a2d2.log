@@ -1,0 +1,3 @@
+2024-05-18T10:13:57+00:00 DEBUG parcelpanel_update_200_migrate_tracking_data: {"empty_order_id_num":0,"empty_tracking_order_num":0,"insert_shipment_num":0}
+2024-05-18T10:13:57+00:00 DEBUG parcelpanel_update_220_migrate_tracking_data: {"affected_rows":0}
+2024-05-18T10:13:57+00:00 DEBUG parcelpanel_update_290_add_tracking: {"add_last_event_at":true}
